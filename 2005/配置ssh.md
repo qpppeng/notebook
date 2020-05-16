@@ -43,12 +43,19 @@ ssh-add ~/.ssh/id_rsa
 # Work1
 Host github.com
 HostName github.com
-IdentityFile ~/.ssh/github
+IdentityFile c:/Users/qqpp/.ssh/github
 
 # Work2
 Host bitbucket.org
 HostName bitbucket.org
 IdentityFile ~/.ssh/bitbucket
 ```
+> 如果是window环境， Identity写成绝对路径，否则会报 Permission denied (publickey).
+
+2 测试是否连接成功
+```shell script
+ssh -T git@github.com
+``` 
+
 
 
